@@ -54,8 +54,8 @@ img {
 
 .container {
   margin: 0 auto;
-  max-width: 1158px;
-  padding: 0 15px;
+  max-width: 320px;
+  padding: 0 16px;
 }
 
 .section {
