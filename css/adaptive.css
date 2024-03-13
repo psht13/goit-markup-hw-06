@@ -382,10 +382,6 @@ img {
   gap: 72px;
 }
 
-.features-list-item {
-  width: 100%;
-}
-
 .icon-container {
   display: none;
 }
@@ -566,7 +562,6 @@ img {
 
 .project-list-item {
   background-color: #ffffff;
-  max-width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -639,7 +634,7 @@ img {
 @media screen and (min-width: 768px) {
   .project-list {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 72px;
     column-gap: 24px;
@@ -667,7 +662,7 @@ img {
 /* ==================== Footer mobile styles ==================== */
 .footer-content {
   background: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -748,7 +743,6 @@ img {
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  text-align: left;
 }
 
 .social-text {
@@ -758,13 +752,6 @@ img {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
-}
-
-.footer-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
 }
 
 .footer-form-input {
@@ -813,10 +800,42 @@ img {
 
 /* ==================== /Footer mobile styles ==================== */
 
-/* ==================== Footer mobile styles ==================== */
+/* ==================== Footer tablet styles ==================== */
+@media screen and (min-width: 768px) {
+  .footer-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: baseline;
+    padding: 0 92px;
+  }
 
-/* ==================== /Footer mobile styles ==================== */
+  .footer-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
 
-/* ==================== Footer mobile styles ==================== */
+  .logotype {
+    text-align: left;
+  }
+}
+/* ==================== /Footer tablet styles ==================== */
 
-/* ==================== /Footer mobile styles ==================== */
+/* ==================== Footer desktop styles ==================== */
+@media screen and (min-width: 1158px) {
+  .footer-flex {
+    flex-wrap: nowrap;
+    padding: 0;
+    gap: 0;
+  }
+  .footer-content-container {
+    margin-right: 120px;
+  }
+
+  .footer-social-container {
+    margin-right: auto;
+  }
+}
+/* ==================== /Footer desktop styles ==================== */
