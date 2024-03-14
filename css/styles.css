@@ -1,4 +1,5 @@
 /* ==================== General styles ==================== */
+/* ==================== General mobile styles ==================== */
 body {
   background-color: #ffffff;
   color: #434455;
@@ -59,11 +60,39 @@ img {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
+/* ==================== /General mobile styles ==================== */
+
+/* ==================== General tablet styles ==================== */
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* ==================== /General tablet styles ==================== */
+
+/* ==================== General desktop styles ==================== */
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+
+  .section {
+    padding: 120px 0;
+  }
+}
+/* ==================== /General desktop styles ==================== */
 /* ==================== /General styles ==================== */
 
 /* ==================== Page header styles ==================== */
+/* ==================== Header mobile styles ==================== */
 .header-container {
   display: flex;
   align-items: center;
@@ -84,7 +113,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
+  padding: 17px 0;
 }
 
 .logo-header {
@@ -97,91 +126,159 @@ img {
 }
 
 .nav-list {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-link {
-  display: block;
-  padding: 24px 0;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav-link:hover,
-.nav-link:focus {
-  color: #404bbf;
-}
-
-.active {
-  position: relative;
-  color: #404bbf;
-}
-
-.active::after {
-  content: '';
-  background-color: #404bbf;
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
+  display: none;
 }
 
 .contacts {
-  font-style: normal;
+  display: none;
 }
 
-.contacts-list {
-  display: flex;
-  gap: 40px;
+@media screen and (max-width: 767px) {
+  .open-menu-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 0;
+    padding: 0;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .open-menu-btn:hover,
+  .open-menu-btn:focus {
+    fill: #404bbf;
+  }
+}
+/* ==================== /Header mobile styles ==================== */
+
+/* ==================== Header tablet styles ==================== */
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 120px;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .open-menu-btn {
+    display: none;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 24px 0;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #404bbf;
+  }
+
+  .active {
+    position: relative;
+    color: #404bbf;
+  }
+
+  .active::after {
+    content: '';
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+  }
+
+  .contacts {
+    display: block;
+    font-style: normal;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-contacts {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-contacts:hover,
+  .header-contacts:focus {
+    color: #404bbf;
+  }
+}
+/* ==================== /Header tablet styles ==================== */
+
+/* ==================== Header desktop styles ==================== */
+@media screen and (min-width: 1158px) {
+  .logo {
+    margin-right: 76px;
+  }
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .header-contacts {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
-.header-contacts {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-contacts:hover,
-.header-contacts:focus {
-  color: #404bbf;
-}
+/* ==================== /Header desktop styles ==================== */
 /* ==================== /Page header styles ==================== */
 
 /* ==================== Main content styles ==================== */
-
-/* ==================== Hero section styles ====================*/
+/* ==================== Hero mobile styles ====================*/
 .hero-section {
   background: #2e2f42;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-img/office.jpg);
+    url(../images/hero-img/office-mobile-min.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  max-width: 1440px;
+  max-width: 767px;
   margin-right: auto;
   margin-left: auto;
 }
 
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-img/office-mobile@2x-min.jpg);
+  }
+}
+
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 496px;
-  margin: 0 auto 48px auto;
+  text-align: center;
+  color: #ffffff;
+  max-width: 156px;
+  margin: 0 auto 80px auto;
 }
 
 .hero-button {
@@ -206,10 +303,73 @@ img {
 .hero-button:focus {
   background-color: #404bbf;
 }
-/* ==================== /Hero section styles ====================*/
+/* ==================== /Hero mobile styles ====================*/
 
-/* ==================== Features section styles ====================*/
-.features-section-title {
+/* ==================== Hero tablet styles ====================*/
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding: 112px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-img/office-tablet-min.jpg);
+    max-width: 1157px;
+  }
+
+  @media screen and (max-width: 1157px) and (min-resolution: 192dpi) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-img/office-tablet@2x-min.jpg);
+    }
+  }
+
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+}
+/* ==================== /Hero tablet styles ====================*/
+
+/* ==================== /Hero desktop styles ====================*/
+@media screen and (min-width: 1158px) {
+  .hero-section {
+    padding: 188px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-img/office-desktop-min.jpg);
+    max-width: 1440px;
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-img/office-desktop@2x-min.jpg);
+    }
+  }
+
+  .hero-title {
+    margin-bottom: 48px;
+  }
+}
+/* ==================== /Hero desktop styles ====================*/
+
+/* ==================== Features section mobile styles ====================*/
+.features-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -217,53 +377,90 @@ img {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
-}
-
-.features-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .features-list {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.features-list-item {
-  width: calc((100% - 72px) / 4);
+  flex-direction: column;
+  gap: 72px;
 }
 
 .icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  background-color: #f4f4fd;
-  margin-bottom: 8px;
-  height: 112px;
+  display: none;
 }
 
 .features-list-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-weight: 500;
 }
-/* ==================== /Features section styles ====================*/
+/* ==================== /Features section mobile styles ====================*/
 
-/* ==================== Team section styles ====================*/
+/* ==================== Features section tablet styles ====================*/
+@media screen and (min-width: 768px) {
+  .features-title {
+    text-align: left;
+  }
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 36px;
+  }
+
+  .features-list-item {
+    flex-basis: calc((100% - 36px) / 2);
+  }
+}
+/* ==================== /Features section tablet styles ====================*/
+
+/* ==================== Features section desktop styles ====================*/
+
+@media screen and (min-width: 1158px) {
+  .features-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .features-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .features-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;
+    height: 112px;
+  }
+
+  .features-list-text {
+    font-weight: 400;
+  }
+}
+/* ==================== /Features section desktop styles ====================*/
+
+/* ==================== Team section mobile styles ====================*/
 .team-section {
   background: #f4f4fd;
 }
 
 .team-list {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .team-section-title {
@@ -287,16 +484,11 @@ img {
 }
 
 .team-list-item {
-  width: calc((100% - 72px) / 4);
+  max-width: 264px;
   border-radius: 0 0 4px 4px;
   background-color: #ffffff;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: #404bbf;
 }
 
 .card-content {
@@ -328,28 +520,60 @@ img {
   fill: #f4f4fd;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* ==================== /Team section styles ====================*/
 
-/* ==================== Portfolio section styles ====================*/
+.social-link:hover,
+.social-link:focus {
+  background-color: #404bbf;
+}
+/* ==================== /Team section mobile styles ====================*/
+
+/* ==================== Team section tablet styles ====================*/
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+
+  .team-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+/* ==================== /Team section tablet styles ====================*/
+
+/* ==================== Team section desktop styles ====================*/
+@media screen and (min-width: 1158px) {
+  .team-list {
+    flex-wrap: nowrap;
+    row-gap: 0;
+  }
+
+  .team-list-item {
+    flex-basis: calc((100% - 72) / 4);
+  }
+}
+/* ==================== /Team section desktop styles ====================*/
+
+/* ==================== Portfolio section mobile styles ====================*/
 .project-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  column-gap: 24px;
+  flex-direction: column;
   row-gap: 48px;
 }
 
 .project-list-item {
   background-color: #ffffff;
-  width: calc((100% - 48px) / 3);
-
-  cursor: pointer;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .project-img-container {
   position: relative;
   overflow: hidden;
 }
+
 .overlay {
   font-weight: 400;
   font-size: 16px;
@@ -408,25 +632,80 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-/* ==================== /Portfolio section styles ====================*/
+/* ==================== /Portfolio section mobile styles ====================*/
 
+/* ==================== Portfolio section tablet styles ====================*/
+@media screen and (min-width: 768px) {
+  .project-list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .project-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+/* ==================== /Portfolio section tablet styles ====================*/
+
+/* ==================== Portfolio section desktop styles ====================*/
+@media screen and (min-width: 1158px) {
+  .project-list {
+    row-gap: 48px;
+  }
+
+  .project-list-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+}
+/* ==================== /Portfolio section desktop styles ====================*/
 /* ==================== /Main content styles ==================== */
 
-/* ==================== Page footer styles ====================*/
+/* ==================== Footer mobile styles ==================== */
 .footer-content {
   background: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
-.footer-flex {
-  display: flex;
-  align-items: baseline;
+@media screen and (max-width: 767px) {
+  .footer-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content-container {
+    margin-bottom: 72px;
+  }
+
+  .footer-social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+
+  .footer-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 .footer-social-links {
   width: 208px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -452,13 +731,11 @@ img {
   background-color: #31d0aa;
 }
 
-.footer-content-container {
-  margin-right: 120px;
-}
-
 .logotype {
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
+  padding: 0;
+  text-align: center;
 }
 
 .logo-footer {
@@ -479,11 +756,6 @@ img {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
-}
-
-.footer-form {
-  display: flex;
-  gap: 24px;
 }
 
 .footer-form-input {
@@ -507,7 +779,7 @@ img {
   justify-content: center;
   border-radius: 4px;
   padding: 8px 24px;
-  min-width: 165px;
+  max-width: 165px;
   height: 40px;
   border: none;
   background: #4d5ae5;
@@ -530,11 +802,51 @@ img {
   background-color: #31d0aa;
 }
 
-.footer-social-container {
-  margin-right: auto;
-}
+/* ==================== /Footer mobile styles ==================== */
 
-/* ==================== /Page footer styles ====================*/
+/* ==================== Footer tablet styles ==================== */
+@media screen and (min-width: 768px) {
+  @media screen and (max-width: 1157px) {
+    .footer-flex.container {
+      max-width: 584px;
+    }
+  }
+  .footer-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: baseline;
+  }
+
+  .footer-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .logotype {
+    text-align: left;
+  }
+}
+/* ==================== /Footer tablet styles ==================== */
+
+/* ==================== Footer desktop styles ==================== */
+@media screen and (min-width: 1158px) {
+  .footer-flex {
+    flex-wrap: nowrap;
+    padding: 0;
+    gap: 0;
+  }
+  .footer-content-container {
+    margin-right: 120px;
+  }
+
+  .footer-social-container {
+    margin-right: auto;
+  }
+}
+/* ==================== /Footer desktop styles ==================== */
 
 /* ==================== Backdrop styles ==================== */
 .backdrop {
@@ -545,11 +857,12 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
-
   opacity: 0;
   visibility: hidden;
+  transition-delay: 1ms;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -558,16 +871,16 @@ img {
 }
 /* ==================== /Backdrop styles ==================== */
 
-/* ==================== Modal window styles ==================== */
+/* ==================== Modal window mobile styles ==================== */
 .modal {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 50%;
+  left: 50%;
   display: block;
-  transform: translateX(-50%);
-  width: 408px;
+  transform: translate(-50%, -50%);
+  width: 288px;
   min-height: 584px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
@@ -603,10 +916,19 @@ img {
   border: none;
   fill: #ffffff;
 }
-/* ==================== /Modal window styles ==================== */
+/* ==================== /Modal window mobile styles ==================== */
 
-/* ==================== Form styles ==================== */
+/* ==================== Modal window tablet styles ==================== */
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+/* ==================== /Modal window tablet styles ==================== */
 
+/* ==================== Form mobile styles ==================== */
 .form-description {
   font-weight: 500;
   font-size: 16px;
@@ -694,8 +1016,21 @@ img {
 }
 
 .form-checkbox-label {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  gap: 8px;
   margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .checkbox-label-text {
+    max-width: 231px;
+  }
+}
+
+.checkbox-label-text {
+  display: block;
 }
 
 .form-terms-link {
@@ -705,7 +1040,7 @@ img {
 }
 
 .form-own-checkbox {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 16px;
@@ -713,7 +1048,6 @@ img {
   fill: transparent;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  margin-right: 8px;
   background-color: ffffff;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -760,4 +1094,113 @@ img {
 .form-submit-btn:focus {
   background-color: #404bbf;
 }
-/* ==================== /Form styles ==================== */
+/* ==================== /Form mobile styles ==================== */
+
+/* ==================== Mobile menu styles ==================== */
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 1ms;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    max-height: 640px;
+    padding: 72px 16px 40px 16px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 168px;
+  }
+
+  .menu-link {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: #404bbf;
+  }
+
+  .menu-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .menu-contact {
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-contact:hover,
+  .menu-contact:focus {
+    color: #404bbf;
+  }
+
+  .menu-social-links-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .menu-social-links-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-social-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    fill: #f4f4fd;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-social-link:hover,
+  .menu-social-link:focus {
+    background-color: #404bbf;
+  }
+}
+/* ==================== /Mobile menu styles  ==================== */
